@@ -5,13 +5,13 @@ export default function DarkModeToggleButton() {
 
   return (
     <button
-      className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+      className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-400 rounded text-base mt-4 md:mt-0 hover:text-orange-500 dark:hover:text-yellow-300"
       type="button"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
       {/* 라이트 모드 */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        fill="none"
+        fill="currentColor"
         viewBox="0 0 24 24"
         strokeWidth="1.5"
         stroke="currentColor"
@@ -26,7 +26,7 @@ export default function DarkModeToggleButton() {
       {/* 다크 모드 */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        fill="none"
+        fill="currentColor"
         viewBox="0 0 24 24"
         strokeWidth="1.5"
         stroke="currentColor"
