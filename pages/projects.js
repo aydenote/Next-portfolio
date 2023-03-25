@@ -22,7 +22,7 @@ export default function Projects({ projectList }) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
   const options = {
     method: 'POST',
     headers: {
@@ -45,6 +45,6 @@ export async function getServerSideProps(context) {
   const res = await fetch(`https://api.notion.com/v1/databases/${DATABASE_ID}/query`, options);
   const projectList = await res.json();
   return {
-    props: { projectList }, // will be passed to the page component as props
+    props: { projectList },
   };
 }
